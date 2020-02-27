@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "Class.h"
-
+#include "Template.h"
 int main() {
     Class *c;
     c = new_class();
@@ -12,5 +12,10 @@ int main() {
 
     c = derived_downcast(d);
     virtual_func(c);
+
+    Template *t;
+    t = new_template();
+    t->data = "asd";
+    printf("data: %s",t->data);
     return 0;
 }
